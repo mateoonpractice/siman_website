@@ -149,7 +149,7 @@ form {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color: var(--white-background);
 }
 
 .titulo-producto {
@@ -165,7 +165,7 @@ form {
 .titulo-producto h1 {
     width: 100%;
     text-align: left;
-    color: darkslategray;
+    color: var(--black-brand);
     font-size: 2rem;
     margin: 0;
 }
@@ -173,25 +173,27 @@ form {
 .titulo-producto h3 {
     width: 100%;
     text-align: left;
-    color: var(--white-background);
+    color: var(--black-brand);
     font-size: 1rem;
     margin: 0;
 }
 
-.producto-detalle {
+.producto-detalle { /*Contenedor despues del titulo*/
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-around;
     width: 100%;
     height: 100%;
     background-color: var(--white-background);
 }
 
+
+
 .main-img-prod {
     width: 45%;
     height: 100%;
     display: flex;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .main-img-prod img {
@@ -206,15 +208,61 @@ form {
     flex-direction: column;
     width: 30%;
     height: 100%;
-    background-color: pink;
+    /* background-color: var(--gray-accents); */
 }
 
-.precio-info {
+.precio-info { /*precio*/
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
     width: 25%;
-    height: 3rem;
-    background-color: var(--yellow-accent);
+    contain-intrinsic-height: 100%;
+    background-color: white;
+    padding: 1rem;
 }
+
+
+.precio-info h1 {
+    width: 100%;
+    text-align: left;
+    color: black;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--yellow-accent); */
+    padding: 1rem 1rem;
+}
+
+.tag {
+    color: var(--red-brand);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.precio input {
+    display: flex;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--ui-border);
+    text-size-adjust: 90%;
+    padding-left: 1rem;
+}
+
+.input-label {
+    color: var(--black-brand);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
 
 /* Agregar al carrito -------------------------*/
 .boton {
@@ -222,7 +270,7 @@ form {
   overflow: hidden;
 
     width: 100%;
-  padding: 10px;
+  padding: 1px;
 
   cursor: pointer;
   user-select: none;
@@ -247,7 +295,7 @@ form {
  
   justify-content: center;
   align-items: center;
-  flex: 0 0 160px;
+  flex: 0 0 3rem;
   
 
 
