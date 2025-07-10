@@ -1,0 +1,454 @@
+:root {
+  /* Brand colors */
+  --brand-primary: #004AAD;
+  --brand-secondary: #FFC300;
+
+  /* UI colors */
+  --ui-background: #F9F9F9;
+  --ui-text: #222222;
+  --ui-border: #DDDDDD;
+
+  /* State colors */
+  --success: #28a745;
+  --warning: #ffc107;
+  --error: #dc3545;
+
+  /* Other colors */
+    --gray-accents: #979899;
+    --red-brand: #a93239;
+    --black-brand: #3f3f40;
+    --gray-background: #d3d3d3;
+    --white-background:#f1f1f1;
+    --pink-accent: #fad1d1;
+    --light-yellow-accent:#fedcbc;
+    --yellow-accent:#faed7c;
+    --green-accent:#97f2ab;
+    --light-blue-accent:#b3e7fd;
+    --light-blue:#b9ccfd;
+
+    --color-dark:  #161616;
+    --color-ocean:  #416dea;
+    --color-grass: #3dd28d;
+    --color-snow: #FFFFFF;
+    --color-salmon: #F32C52;
+    --color-sun: #feee7d;
+    --color-alge: #7999a9;
+    --color-flower: #353866;
+    --color-smoke: #e4e4e4;
+  
+    --borderRadius: 36px;
+
+    --font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+body {
+    margin: 0%;
+}
+
+/* Header ----------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--red-brand);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 20%;
+    height: 80%;
+    margin: 0.5rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.buscador {
+    background: url('images/loupe.png');
+    background-size: 3%;
+    background-position: 1%;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    background-color: darkred;
+    color: white;
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.buscador::placeholder {
+    color: var(--gray-background); /* Change to any color you want */
+    opacity: 1;  /* Ensures full opacity */
+}
+
+.corner {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 15%;
+    height: 100%;
+}
+
+.corner img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Menu ----------------------------------*/
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--ui-border);
+    position: sticky;
+    top: 3.45rem; /* Adjusted to account for header height */
+    z-index: 1000;
+}
+
+.menu h1 {
+    display: flex;
+    width: 15%;
+    color: black;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a {
+    color: var(--black-brand);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Cinta -----------------------------*/
+.cinta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 1rem;
+}
+
+
+
+
+/* Hot Sales -------------------------*/
+.section-title {
+    text-align: left;
+    justify-self: left;
+    color: var(--red-brand);
+    font-size: 1.5rem;
+    width: 100%;
+    padding-left: 5%;
+    margin: 1rem 0;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-background);
+}
+
+.hot-sales{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.producto-landing {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    width: 15%;
+    height: 15%;
+}
+
+.img-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.producto-landing img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.producto-landing .brand {
+    color:#3f3f40;
+    height: auto;
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 10%;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.producto-landing h2 {
+    text-align: left;
+    color: black;
+    font-size: 1rem;
+    width: 100%;
+    height: 2.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+    margin: 0 0 0.5rem 0;
+    padding-left: 5%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    white-space: normal;
+    max-height: 2.6em; 
+}
+
+.producto-landing h2[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #222;
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    white-space: pre-line;
+    z-index: 10;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.producto-landing h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.producto-landing p {
+    text-align: left;
+    color: var(--red-brand);
+    font-size: 1.4rem;
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+    padding-left: 5%;
+}
+
+/* Agregar al carrito -------------------------*/
+.boton {
+  display: flex;
+  overflow: hidden;
+
+    width: 100%;
+  padding: 10px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+
+  color: #fff;
+  border: 0 none;
+  border-radius: var(--borderRadius);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+ 
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+  
+
+
+  &:hover {
+    transition: all 150ms linear;
+
+    opacity: .85;
+  }
+  
+  &:active {
+    transition: all 150ms linear;
+    opacity: .75;
+  }
+  
+  &:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+  }
+}
+
+.boton.-rojo {
+  color: var(--color-snow);
+  background: var(--color-salmon);
+}
+
+/* Beneficios ------------------------------*/
+.beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-background);
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 80px;
+    background-color: white;
+}
+
+.card img {
+    width: 50px;
+    margin: 1.5rem;
+}
+
+.card h2 {
+    margin: 1rem;
+}
+
+.card p {
+    padding: 1rem;
+}
+
+/*Footer -----------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100px;
+    gap: 0.5rem;
+}
+
+footer p {
+    width: 75%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 800px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .corner {
+        order: 1;
+        justify-self: right;
+        width: 20%;
+    }
+
+    header img {
+        order: 0;
+        width: 70%;
+        height: 35px;
+    }
+
+    form {
+        order: 2;
+        width: 95%;
+        margin: 0.5rem 0;
+        padding-left: 0.5rem;
+    }
+
+    .buscador {
+        height: 3rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        position: static;
+    }
+
+    .menu h1 {
+        width: 100%;
+        text-align: center;
+        padding-left: 5%;
+        margin-top: 0.5rem;
+    }   
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: left;
+        row-gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .hot-sales {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .producto-landing {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+    width: 100%;
+    margin-bottom: 1rem;
+    }
+}
+
