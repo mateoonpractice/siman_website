@@ -7,9 +7,9 @@
     <title>Almacenes Simán</title>
 </head>
 <body>
-    <section class="cinta">
+    <!--section class="cinta">
         <h2>PROMOCIONES ESPECIALES</h2>
-    </section>
+    </section-->
     <!-- Header con logotipo, buscador y carrito de compra -->
     <header>
         <!-- Barra de anuncios y promociones -->
@@ -19,8 +19,17 @@
         </form>
         <!-- Carrito de Compra -->
         <!-- Sign In -->
-        <section>
-            <h1>Menú</h1>
+        <section class="corner">
+            <div class="corner__item">
+                <a href="google.com" class="corner__link">
+                    <img src="images\icons\user.png" alt="Usuario">
+                </a>
+            </div>
+            <div class="corner__item">
+                <a href="google.com" class="corner__link">
+                    <img src="images\icons\cart.png" alt="Carrito de Compras">
+                </a>
+            </div>            
         </section>
     </header>
     <!-- Contenido-->
@@ -43,7 +52,7 @@
     <section>
         <!--Más comprados-->
         <div>
-        <h1>Más comprados</h1>
+        <h1 class="section-title">Más comprados</h1>
         </div>
         <div class="hot-sales">
             <div class="producto-landing">
@@ -97,30 +106,34 @@
         <!--Beneficios-->
         <div class="cards">
             <div class="card">
-                <img src="images/beneficios/beneficio1.png" alt="Beneficio 1">
+                <img src="images\icons\escudo.svg" alt="Beneficio 1">
                 <h3>Pago 100% seguro</h3>
                 <p>Compras encriptadas</p>
             </div>
             <div class="card">
-                <img src="images/beneficios/beneficio2.png" alt="Beneficio 2">
+                <img src="images\icons\rombo.svg" alt="Beneficio 2">
                 <h3>Programa de Reemplazo</h3>
                 <p>Conoce más sobre Siman Pro</p>
             </div>
             <div class="card">
-                <img src="images/beneficios/beneficio3.png" alt="Beneficio 3">
+                <img src="images\icons\srombo.svg" alt="Beneficio 3">
                 <h3>Garantía de devolución SIMAN</h3>
                 <p>Durante los primeros 30 días</p>
             </div>
         </div>
     </div>
     <footer>
-        <div>
-            Almacenes Siman S.A. de C.V. //
+        <p>
+            Almacenes Siman S.A. de C.V. // 
             NIT: 0614–170266–001-3 // 
             Almacenes venta de diversos artículos // 
             Paseo General Escalón, Centro Comercial Galerías, San Salvador. // 
-            2298-3777 // contacto@siman.com
-        </div>
+            2298-3777 // contacto@siman.com <br>
+            © 2023 Almacenes Siman S.A. de C.V. Todos los derechos reservados. 
+        </p>
+        <p>
+            Powered by Mateo Lopez.
+        </p>
     </footer>    
 </body>
 </html>
